@@ -1,0 +1,1295 @@
+/*
+Theme Name: Newspaper Child
+Template: Newspaper
+Description: Child theme of Newspaper for BE803 website
+Text-Domain: Newspaper-child
+test
+*/
+/*Table of Contents
+Homepage
+  a. Event Listing
+  b. Featured Listing
+Media Queries
+Widgets
+*/
+
+/**** 1. Homepage ****/
+ /** a. Event Listing **/
+
+ .be-listing {
+	box-shadow: 1px 1px 3px;
+	background-size: cover;
+	background-position: 50% 20%;
+}
+
+.event-card {
+    height: 250px;
+}
+
+
+
+.tribe-events-list .tribe-events-loop .tribe-events-first, .tribe-events-list .tribe-events-loop .tribe-event-featured {
+    padding: 0px;
+}
+
+.be-listing .tribe-events-list-event-title h2 {
+    font-family: refrigerator-deluxe;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 700;
+	color: #ffffff;
+}
+
+
+.be-listing-container, .be-featured-listing-container {
+	position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+	z-index: 1;
+}
+
+.be-listing::before, .be-featured-event-listing::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: rgba(34,34,34,0.1);
+		background: -moz-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,0.1)), color-stop(20%, rgba(27,27,27,0.1)), color-stop(100%, rgba(0,0,0,0.8)));
+		background: -webkit-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -o-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -ms-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to bottom, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#000000', GradientType=0 );
+
+}
+
+.be-listing:hover::before, .be-featured-event-listing:hover::before {
+	background: rgba(34,34,34,0.8);
+}
+
+
+
+
+
+.tribe-events-list .tribe-events-loop .type-tribe_events .tribe-events-event-meta {
+    margin: 0;
+    margin-left:4px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/** 1.b Featured Listing **/
+.be-featured-event-listing {
+    height: 750px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 3px;
+}
+
+.be-featured-tag {
+    background-color: #ef4136;
+	width: 100px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow: 1px 1px 1px #f0f0f0;
+
+
+}
+
+.be-featured-tag h5 {
+	margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+	font-size: 14px;
+	display: inline;
+	vertical-align: middle;
+	font-weight: 500;
+
+}
+
+.be-featured-listing-container .tribe-events-list-event-title span.tribe-event-date-start {
+    font-size: 20px;
+}
+
+.be-featured-listing-container .tribe-events-list-event-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+
+.be-featured-event-listing .tribe-events-list-event-title {
+    line-height: 25px;
+    font-size: 1.5em;
+    font-weight: 700;
+
+
+}
+
+/*.be-featured-listing-container:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}*/
+
+.be-featured-event-listing h2.tribe-events-list-event-title {
+    margin-top: 0px !important;
+
+
+}
+
+.be-featured-event-listing .tribe-event-schedule-details {
+    font-size: 20px;
+}
+
+.tribe-event-list-event-title-wrapper h2 {
+    margin: 0px auto;
+    line-height: 25px;
+    /* font-size: 30px; */
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.tribe-event-list-event-title-wrapper h2.tribe-event-list-event-title {
+    font-size: 26px;
+    font-weight: 800;
+    text-shadow: none;
+}
+
+.tribe-event-list-event-title-wrapper {
+    width: 500px;
+    height: auto;
+	margin-left: 20px;
+}
+
+
+
+.listing-container .be-featured-listing-container {
+    bottom: 0;
+    padding-top: 50px;
+    position: absolute;
+}
+
+.listing-container:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+a.be-listing-link, a.icon-cover{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.be-listing .tribe-event-schedule-details, .be-listing .tribe-events-venue-details, .be-featured-event-listing .tribe-event-schedule-details, .be-featured-event-listing .tribe-events-venue-details a {
+    color: #ffffff;
+    text-transform: uppercase;
+
+}
+
+.be-listing .tribe-event-schedule-details, .be-featured-event-listing .tribe-event-schedule-details {
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 25px;
+	margin-left: 35px;
+
+}
+.tribe-events-list .tribe-events-venue-details {
+	font-style: normal;
+	color: #ffffff;
+}
+
+.be-listing .tribe-events-event-meta {
+	width: 80%;
+}
+
+
+.be-listing a.tribe-event-url {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.4em;
+}
+
+.tribe-events-event-meta {
+    position: relative;
+    z-index: 1;
+	color: #ffffff
+}
+
+
+
+.be-listing .tribe-events-venue-details a, .be-featured-event-listing .tribe-events-venue-details a {
+    color: #ffffff !important;
+}
+
+.be-listing a.tribe-events-venue-details:hover {
+    color: #ef4136;
+}
+
+.be-featured-listing-container .tribe-events-event-meta {
+    display: inline-block;
+
+}
+
+.tribe-events-event-meta .tribe-events-venue-details {
+    display: inline-block;
+	width: 40%;
+
+}
+
+@media (max-width: 767px) {
+	.tribe-events-event-meta .tribe-events-venue-details {
+		width: 100%;
+ }
+}
+
+.be-social-media {
+    display: inline-block;
+}
+
+/* Google Map Marker Icon*/
+
+
+.pulse:after {
+	content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0.0;
+    box-shadow: 0 0 1px 2px #fe0000;
+    animation-delay: 0.1s;
+	display: none;
+}
+
+.be-icon:hover + .pulse:after {
+	display: block;
+
+}
+
+
+@-webkit-keyframes pulsate {
+  0% { -webkit-transform: scale(0.1, 0.1);   opacity: 0.0;}
+  50% { opacity: 1.0; }
+  100% { transform: scale(1.2, 1.2); opacity: 0; }
+}
+
+
+
+.td-boxed-layout .td-header-style-3 .td-header-menu-wrap, .td-boxed-layout .td-header-style-4 .td-header-menu-wrap, .td-header-style-3 .td_stretch_content .td-header-menu-wrap, .td-header-style-4 .td_stretch_content .td-header-menu-wrap {
+    background-color: #ffffff !important;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Logo in Nav */
+.td-main-menu-logo img {
+    padding: 0px 10px 3px 30px;
+    position: relative;
+    vertical-align: middle;
+    max-height: 70px;
+}
+
+#td-header-menu {
+    min-height: 70px;
+}
+
+
+
+.sf-menu > li > a {
+    padding: 0 24px;
+    line-height: 70px;
+    font-size: 22px;
+    color: #e6e7e8;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+}
+
+.td-main-menu-logo img {
+    padding: 0 10px 0 30px;
+    position: relative;
+    vertical-align: middle;
+    max-height: 70px;
+}
+
+@media (max-width: 767px) {
+	.be-social-media-faces {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px)
+{.td-header-style-4 .td-main-menu-logo img {
+    margin: 0 0 0 4em;
+    padding: 0 0 16px 0;
+}
+
+/* Active Nav Item Text Color */
+.td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .td-header-style-12 .td-header-menu-wrap-full, .sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after, .sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .td-header-style-12 .td-affix, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, input[type=submit]:hover, .td-read-more a, .td-post-category:hover, .td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category, .td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category, .td_top_authors .td-active .td-author-post-count, .td_top_authors .td-active .td-author-comments-count, .td_top_authors .td_mod_wrap:hover .td-author-post-count, .td_top_authors .td_mod_wrap:hover .td-author-comments-count, .td-404-sub-sub-title a:hover, .td-search-form-widget .wpb_button:hover, .td-rating-bar-wrap div, .td_category_template_3 .td-current-sub-category, .dropcap, .td_wrapper_video_playlist .td_video_controls_playlist_wrapper, .wpb_default, .wpb_default:hover, .td-left-smart-list:hover, .td-right-smart-list:hover, .woocommerce-checkout .woocommerce input.button:hover, .woocommerce-page .woocommerce a.button:hover, .woocommerce-account div.woocommerce .button:hover, #bbpress-forums button:hover, .bbp_widget_login .button:hover, .td-footer-wrapper .td-post-category, .td-footer-wrapper .widget_product_search input[type="submit"]:hover, .woocommerce .product a.button:hover, .woocommerce .product #respond input#submit:hover, .woocommerce .checkout input#place_order:hover, .woocommerce .woocommerce.widget .button:hover, .single-product .product .summary .cart .button:hover, .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover, .td-next-prev-wrap a:hover, .td-load-more-wrap a:hover, .td-post-small-box a:hover, .page-nav .current, .page-nav:first-child > div, .td_category_template_8 .td-category-header .td-category a.td-current-sub-category, .td_category_template_4 .td-category-siblings .td-category a:hover, #bbpress-forums .bbp-pagination .current, #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a, .td-theme-slider:hover .slide-meta-cat a, a.vc_btn-black:hover, .td-trending-now-wrapper:hover .td-trending-now-title, .td-scroll-up, .td-smart-list-button:hover, .td-weather-information:before, .td-weather-week:before, .td_block_exchange .td-exchange-header:before, .td_block_big_grid_9.td-grid-style-1 .td-post-category, .td_block_big_grid_9.td-grid-style-5 .td-post-category, .td-grid-style-6.td-hover-1 .td-module-thumb:after, .td-pulldown-syle-2 .td-subcat-dropdown ul:after, .td_block_template_9 .td-block-title:after, .td_block_template_15 .td-block-title:before {
+    color: white;
+}
+
+/* Active Nav Item Background Color */
+.sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after,.sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .td_block_mega_menu .td-next-prev-wrap a:hover, .td-mega-span .td-post-category:hover, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a {
+    background-color: #e6e7e8;
+}}
+
+.datepicker.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 275px;
+    list-style: none;
+    background-color: #d22e23;
+    /* border: 1px solid #ccc; */
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    color: white;
+    font-family: "refrigerator-deluxe", Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.datepicker table tr td.active.active, .datepicker table tr td span.active.active {
+    background: #222222;
+}
+
+span.fa.fa-circle {
+    background: #ffffff;
+    margin: auto 5px;
+}
+
+.fa {
+	height: 25px;
+	width: 25px;
+	background: #ef4136;
+	border-radius: 50%;
+	padding: 5px;
+
+}
+
+.fa-star:before {
+	color: #2F2F2F;
+}
+
+.face {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.number-going {
+    margin: auto 10px;
+}
+.be-social-wrapper, .be-social-media-faces {
+	display: inline;
+	height: 30px;
+	width: auto;
+	position: relative;
+	color: #fff;
+
+}
+
+.be-social-wrapper {
+    margin-left: 16px;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.be-social-media-faces {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**** Widgets ****/
+.tribe-event-image img {
+    display: block;
+}
+
+.tribe-event-duration {
+    background-color: #ef4136;
+}
+
+.tribe-events-list-widget-events span.tribe-event-date-start {
+    margin-left: 20px;
+}
+.be-tribe-event-title {
+    background-color: black;
+    padding: 20px;
+}
+
+.tribe-events-adv-list-widget .tribe-event-title {
+    margin-top: 0px;
+}
+
+.tribe-events-list-widget-events {
+    text-transform: uppercase;
+    font-family: refrigerator-deluxe;
+}
+
+h4.tribe-event-title {
+    font-family: refrigerator-deluxe;
+}
+
+/******* Widgets Styling ****/
+.tribe-events-list-widget-events .tribe-event-image img {
+    display: block;
+    width: 325px;
+    height: 250px;
+}
+
+.tribe-events-list-widget-events .tribe-event-duration {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.featured-event-widget-list {
+	background-color: #222222;
+	height: auto;
+	padding: 15px;
+}
+
+.featured-event-widget-list .be-tribe-event-title {
+	background: #222222;
+	padding: 0px;
+}
+
+
+
+.be-tribe-event-title h4.tribe-event-title {
+    line-height: 0.9;
+    font-size: 28px;
+    font-weight: 900;
+
+}
+
+.featured-event-widget-list .tribe-events-venue-details, .featured-event-widget-list .be-social-wrapper {
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+	line-height: 20px;
+}
+
+
+
+
+.featured-event-widget-list .fa {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+}
+
+.featured-event-widget-list .fa::before {
+    font-size: 13px;
+    position: absolute;
+    margin: 2px;
+}
+
+.featured-event-widget-list .number-going {
+    margin-left: 5px;
+}
+
+.featured-event-widget-list .be-social-wrapper {
+	margin-left: 0px;
+}
+
+/**** 1. Homepage ****/
+ /** a. Event Listing **/
+
+ .be-listing {
+	box-shadow: 1px 1px 3px;
+	background-size: cover;
+	background-position: 50% 20%;
+}
+
+.event-card {
+    height: 250px;
+}
+
+
+
+.tribe-events-list .tribe-events-loop .tribe-events-first, .tribe-events-list .tribe-events-loop .tribe-event-featured {
+    padding: 0px;
+}
+
+.be-listing .tribe-events-list-event-title h2 {
+    font-family: refrigerator-deluxe;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 700;
+	color: #ffffff;
+}
+
+
+.be-listing-container, .be-featured-listing-container {
+	position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+	z-index: 1;
+}
+
+.be-listing::before, .be-featured-event-listing::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: rgba(34,34,34,0.1);
+		background: -moz-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,0.1)), color-stop(20%, rgba(27,27,27,0.1)), color-stop(100%, rgba(0,0,0,0.8)));
+		background: -webkit-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -o-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -ms-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to bottom, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#000000', GradientType=0 );
+
+}
+
+.be-listing:hover::before, .be-featured-event-listing:hover::before {
+	background: rgba(34,34,34,0.8);
+}
+
+
+
+
+
+.tribe-events-list .tribe-events-loop .type-tribe_events .tribe-events-event-meta {
+    margin: 0;
+	margin-left:4px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/** 1.b Featured Listing **/
+.be-featured-event-listing {
+    height: 750px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 3px;
+}
+
+.be-featured-tag {
+    background-color: #ef4136;
+	width: 100px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow: 1px 1px 1px #f0f0f0;
+
+
+}
+
+.be-featured-tag h5 {
+	margin: 0 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+	font-size: 14px;
+	display: inline;
+	vertical-align: middle;
+	font-weight: 500;
+
+}
+
+.be-featured-listing-container .tribe-events-list-event-title span.tribe-event-date-start {
+    font-size: 20px;
+}
+
+.be-featured-listing-container .tribe-events-list-event-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+
+.be-featured-event-listing .tribe-events-list-event-title {
+    line-height: 25px;
+    font-size: 1.5em;
+    font-weight: 700;
+
+
+}
+
+/*.be-featured-listing-container:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}*/
+
+.be-featured-event-listing h2.tribe-events-list-event-title {
+    margin-top: 0px !important;
+
+
+}
+
+.be-featured-event-listing .tribe-event-schedule-details {
+    font-size: 20px;
+}
+
+.tribe-event-list-event-title-wrapper h2 {
+    margin: 0px auto;
+    line-height: 25px;
+    /* font-size: 30px; */
+    color: #ffffff;
+    text-shadow: 3px 3px 1px black;
+}
+
+.tribe-event-list-event-title-wrapper h2.tribe-event-list-event-title {
+    font-size: 26px;
+    font-weight: 800;
+    text-shadow: 3px 3px 1px black;
+}
+
+.tribe-event-list-event-title-wrapper {
+    width: 500px;
+    height: auto;
+	margin-left: 35px;
+}
+
+
+
+.listing-container .be-featured-listing-container {
+    bottom: 0;
+    padding-top: 50px;
+    position: absolute;
+}
+
+.listing-container:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+a.be-listing-link, a.icon-cover{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.be-listing .tribe-event-schedule-details, .be-listing .tribe-events-venue-details, .be-featured-event-listing .tribe-event-schedule-details, .be-featured-event-listing .tribe-events-venue-details a {
+    color: #ffffff;
+    text-transform: uppercase;
+
+}
+
+.be-listing .tribe-event-schedule-details, .be-featured-event-listing .tribe-event-schedule-details {
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 25px;
+	margin-left: 35px;
+
+}
+.tribe-events-list .tribe-events-venue-details {
+	font-style: normal;
+	color: #ffffff;
+}
+
+.be-listing .tribe-events-event-meta {
+	width: 80%;
+}
+
+
+.be-listing a.tribe-event-url {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.4em;
+}
+
+.tribe-events-event-meta {
+    position: relative;
+    z-index: 1;
+	color: #ffffff
+}
+
+
+
+.be-listing .tribe-events-venue-details a, .be-featured-event-listing .tribe-events-venue-details a {
+    color: #ffffff !important;
+}
+
+.be-listing a.tribe-events-venue-details:hover {
+    color: #ef4136;
+}
+
+.be-featured-listing-container .tribe-events-event-meta {
+    display: inline-block;
+
+}
+
+.tribe-events-event-meta .tribe-events-venue-details {
+    display: inline-block;
+	width: 40%;
+
+}
+
+.be-social-media {
+    display: inline-block;
+}
+
+/* Google Map Marker Icon*/
+
+.pulse {
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin: 11px 0px 0px -12px;
+  transform: rotateX(55deg);
+  z-index: -2;
+  display: block;
+
+}
+
+.pulse:after {
+	content: "";
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0.0;
+    box-shadow: 0 0 1px 2px #fe0000;
+    animation-delay: 0.1s;
+	display: none;
+}
+
+
+@-webkit-keyframes pulsate {
+  0% { -webkit-transform: scale(0.1, 0.1);   opacity: 0.0;}
+  50% { opacity: 1.0; }
+  100% { transform: scale(1.2, 1.2); opacity: 0; }
+}
+
+
+
+.td-boxed-layout .td-header-style-3 .td-header-menu-wrap, .td-boxed-layout .td-header-style-4 .td-header-menu-wrap, .td-header-style-3 .td_stretch_content .td-header-menu-wrap, .td-header-style-4 .td_stretch_content .td-header-menu-wrap {
+    background-color: #ffffff !important;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Logo in Nav */
+.td-main-menu-logo img {
+    padding: 0px 10px 3px 0px;
+    position: relative;
+    vertical-align: middle;
+    max-height: 70px;
+}
+
+#td-header-menu {
+    min-height: 70px;
+}
+
+
+
+.sf-menu > li > a {
+    padding: 0 24px;
+    line-height: 70px;
+    font-size: 22px;
+    color: #e6e7e8;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+}
+
+.td-main-menu-logo img {
+    padding: 0 10px 0 0;
+    position: relative;
+    vertical-align: middle;
+    max-height: 70px;
+}
+
+@media (max-width: 767px)
+{.td-header-style-4 .td-main-menu-logo img {
+    margin: 0 0 0 4em;
+    padding: 0 0 16px 0;
+}
+
+/* Active Nav Item Text Color */
+.td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .td-header-style-12 .td-header-menu-wrap-full, .sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after, .sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .td-header-style-12 .td-affix, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, input[type=submit]:hover, .td-read-more a, .td-post-category:hover, .td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category, .td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category, .td_top_authors .td-active .td-author-post-count, .td_top_authors .td-active .td-author-comments-count, .td_top_authors .td_mod_wrap:hover .td-author-post-count, .td_top_authors .td_mod_wrap:hover .td-author-comments-count, .td-404-sub-sub-title a:hover, .td-search-form-widget .wpb_button:hover, .td-rating-bar-wrap div, .td_category_template_3 .td-current-sub-category, .dropcap, .td_wrapper_video_playlist .td_video_controls_playlist_wrapper, .wpb_default, .wpb_default:hover, .td-left-smart-list:hover, .td-right-smart-list:hover, .woocommerce-checkout .woocommerce input.button:hover, .woocommerce-page .woocommerce a.button:hover, .woocommerce-account div.woocommerce .button:hover, #bbpress-forums button:hover, .bbp_widget_login .button:hover, .td-footer-wrapper .td-post-category, .td-footer-wrapper .widget_product_search input[type="submit"]:hover, .woocommerce .product a.button:hover, .woocommerce .product #respond input#submit:hover, .woocommerce .checkout input#place_order:hover, .woocommerce .woocommerce.widget .button:hover, .single-product .product .summary .cart .button:hover, .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover, .td-next-prev-wrap a:hover, .td-load-more-wrap a:hover, .td-post-small-box a:hover, .page-nav .current, .page-nav:first-child > div, .td_category_template_8 .td-category-header .td-category a.td-current-sub-category, .td_category_template_4 .td-category-siblings .td-category a:hover, #bbpress-forums .bbp-pagination .current, #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a, .td-theme-slider:hover .slide-meta-cat a, a.vc_btn-black:hover, .td-trending-now-wrapper:hover .td-trending-now-title, .td-scroll-up, .td-smart-list-button:hover, .td-weather-information:before, .td-weather-week:before, .td_block_exchange .td-exchange-header:before, .td_block_big_grid_9.td-grid-style-1 .td-post-category, .td_block_big_grid_9.td-grid-style-5 .td-post-category, .td-grid-style-6.td-hover-1 .td-module-thumb:after, .td-pulldown-syle-2 .td-subcat-dropdown ul:after, .td_block_template_9 .td-block-title:after, .td_block_template_15 .td-block-title:before {
+    color: white;
+}
+
+/* Active Nav Item Background Color */
+.sf-menu > .current-menu-item > a:after, .sf-menu > .current-menu-ancestor > a:after, .sf-menu > .current-category-ancestor > a:after,.sf-menu > li:hover > a:after, .sf-menu > .sfHover > a:after, .td_block_mega_menu .td-next-prev-wrap a:hover, .td-mega-span .td-post-category:hover, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .header-search-wrap .td-drop-down-search:after, .header-search-wrap .td-drop-down-search .btn:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a {
+    background-color: #e6e7e8;
+}}
+
+.datepicker.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 275px;
+    list-style: none;
+    background-color: #d22e23;
+    /* border: 1px solid #ccc; */
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    color: white;
+    font-family: "refrigerator-deluxe", Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.datepicker table tr td.active.active, .datepicker table tr td span.active.active {
+    background: #222222;
+}
+
+span.fa.fa-circle {
+    background: #ffffff;
+    margin: auto 5px;
+}
+
+.fa {
+	height: 25px;
+	width: 25px;
+	background: #ef4136;
+	border-radius: 50%;
+	padding: 5px;
+
+}
+
+.fa-star:before {
+	color: #2F2F2F;
+}
+
+.face {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.number-going {
+    margin: auto 10px;
+}
+.be-social-wrapper, .be-social-media-faces {
+	display: inline;
+	height: 30px;
+	width: auto;
+	position: relative;
+	color: #fff;
+
+}
+
+.be-social-wrapper {
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.be-social-media-faces {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**** Widgets ****/
+.tribe-event-image img {
+    display: block;
+}
+
+.tribe-event-duration {
+    background-color: #ef4136;
+}
+
+.tribe-events-list-widget-events span.tribe-event-date-start {
+    margin-left: 20px;
+}
+.be-tribe-event-title {
+    background-color: black;
+    padding: 20px;
+}
+
+.tribe-events-adv-list-widget .tribe-event-title {
+    margin-top: 0px;
+}
+
+.tribe-events-list-widget-events {
+    text-transform: uppercase;
+    font-family: refrigerator-deluxe;
+}
+
+h4.tribe-event-title {
+    font-family: refrigerator-deluxe;
+}
+
+.featured-event-widget-list i.fa.fa-map-marker, .be-listing-container i.fa.fa-map-marker{
+    background: none;
+    color: #ef4136;
+    height: 20px;
+    width: 20px;
+}
+
+.featured-event-widget-list i.fa.fa-map-marker::before {
+	font-size: 20px;
+}
+
+.be-listing-container i.fa.fa-map-marker::before {
+	font-size: 23px;
+}
+
+.be-social-wrapper span.fa.fa-star, .be-social-media-faces span.fa.fa-circle {
+	height: 20px;
+	width: 20px;
+	padding: 2px;
+}
+
+.featured-event-widget-list span.fa.fa-star {
+    height: 15px;
+    width: 15px;
+    padding: 0px;
+}
+
+.featured-event-widget-list .tribe-events-venue-details {
+    margin-bottom: 5px;
+}
+
+
+/*Login Modal Form*/
+.mfp-content .td-login-panel-descr {
+	margin-bottom: 30px;
+}
+
+.mfp-content .td-login-inputs {
+	margin-top: 20px;
+
+}
+
+#be803-facebook-wrapper {
+    background: #4267b2;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+	border-radius: 5px;
+	height: 60px;
+	line-height: 60px;
+}
+
+#be803-facebook-wrapper a {
+    color: #ffffff;
+    margin-left: 33px;
+    /* float: right; */
+}
+
+div#be803-facebook-wrapper a {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    margin: auto 5px 20px 20px;
+}
+
+.be803-fb-btn {
+    padding: 10px auto;
+}
+
+
+
+#be803-facebook-wrapper .fa {
+    background: none;
+	padding: 0px;
+}
+
+
+/****Saved Events List*****/
+
+.wpulike { z-index: 2; }
+.saved-event-card { height: 250px; position: relative; margin-bottom: 30px; box-shadow: 1px 1px 3px; background-size: cover; background-position: 50% 20%; }
+.saved-event-card h2 {
+  font-family:"refrigerator-deluxe";
+  text-transform: uppercase;
+}
+.saved-event-card .tribe-event-schedule-details {
+	font-size: 20px;
+	font-weight: 500;
+	color: #ffffff;
+  text-transform: uppercase;
+}
+.saved-event-link-wrapper {width: 100%; height: 100%; position: absolute; z-index: 1;}
+.saved-event-card:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(34,34,34,0.1);
+    background: linear-gradient(to bottom, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+    background: -moz-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,0.1)), color-stop(20%, rgba(27,27,27,0.1)), color-stop(100%, rgba(0,0,0,0.8)));
+		background: -webkit-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -o-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: -ms-linear-gradient(top, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to bottom, rgba(34,34,34,0.1) 0%, rgba(27,27,27,0.1) 20%, rgba(0,0,0,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#000000', GradientType=0 );
+}
+
+.saved-event-card:hover:after {
+    background: rgba(34, 34, 34, 0.8);
+}
+
+.saved-event-card .be-listing-container {
+    margin: auto 30px 30px 25px;
+}
+
+.saved-event-card .tribe-event-list-event-title-wrapper {
+    margin-left: 0;
+    margin-bottom: 16px;
+}
+
+.saved-event-card .tribe-event-schedule-details {
+    width: fit-content;
+}
+
+.tribe-event-date-start {
+    width: auto;
+}
+
+.saved-event-card .be-listing-container i.fa.fa-map-marker {
+  padding: 0px;
+}
+
+.tribe-events-event-meta {color: #ffffff;text-transform: uppercase;font-size: 18px;font-weight: 700;}
+.tribe-events-event-meta a {color: #ffffff !important;}
+
+
+.wpulike .wp_ulike_btn {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: #009d93;
+    width: 84px;
+    height: 34px;
+  }
+  
+  .wpulike {
+      float: right;
+  }
+  
+  .event-card {
+    padding-right: 30px;
+    padding-top: 25px;
+  }
+  
+  .td-header-menu {
+      float: left;
+      width: 70%;
+  }
+  
+  .menu_rightside_bar {
+      width: 30%;
+      float: right;
+  }
+  
+  /**Register Login Menu Header**/
+  #td-top-search {
+    position: inherit;
+    margin: auto;
+    display: inline-block;
+  }
+  
+  .td-search-wrapper, .sign-in-wrapper {
+      width: auto;
+      display: inline-block;
+  }
+
+  .td-search-wrapper {
+      float: right;
+  }
+  
+  .td-search-wrapper
+  a {
+      line-height: 70px;
+  }
+  
+  .menu_rightside_bar .top-header-menu li a {
+    font-family:"refrigerator-deluxe";
+    font-size:22px;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-align: center;
+  
+  }
+  
+  div#login-form, div#be-register-div {
+      font-family: "refrigerator-deluxe";
+  }
+  
+  .wpb_button {
+      font-family: "refrigerator-deluxe";
+  }
+
+#login-form .td-login-panel-title, #login-form .td-login-button, #signup-form .td-login-panel-title, #signup-form .td-login-button {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#login-form .td-login-panel-descr, #signup-form .td-login-panel-descr {
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+#login-form .td-login-info-text, #signup-form .td-login-info-text {
+    font-size: 12px;
+}
+
+
+
+.td-header-main-menu {
+    padding-right: 0px;
+}
+
+
+.user-options-container {
+    position: fixed;
+    right: 100px;
+    top: 85px;
+    min-width: 200px;
+    background-color: #ef4136;
+    min-height: 150px;
+    z-index: 9;
+    box-shadow: 1px 1px 1px #474747;
+
+}
+
+
+.sign-in-wrapper .avatar {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+
+.sign-in-wrapper .menu-item {
+    font-family: "refrigerator-deluxe";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sign-in-wrapper .display_name {
+    text-transform: uppercase;
+}
+
+
+.sign-in-wrapper .fa {
+    background-color: transparent;
+    color: #474747;
+}
+
+
+.td-search-wrapper, .sign-in-wrapper {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.user-options {
+    background-color: #ef4136;
+    font: #ffffff;
+    width: 250px;
+    height: 150px;
+}
+
+
+.user-options-item li a {
+    color: #ffffff;
+}
+
+
+.user-options-item a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-options-item a:hover {
+    font-weight: 900;
+    font-size: 22px;
+}
+
+
+ul.user-options {
+    list-style: none;
+}
+
+
+
+.user-options-item {
+    padding: 30px 10px 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
